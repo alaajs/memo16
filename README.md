@@ -1,75 +1,86 @@
-# [BDReborn V6 (Final Version)](https://telegram.me/BDReborn)
+# [<< TH3BOSS >> V16 (Final Version)](https://telegram.me/llDEV1ll)
 
 **An advanced and powerful administration bot based on NEW TG-CLI
 
 
 * * *
 
-## Commands
-
-| Use help |
-|:--------|:------------|
-| [#!/]help | just send help in your group and get the commands |
-
-**You can use "#", "!", or "/" to begin all commands
-
-* * *
 
 # Installation
 
-**If use BDHelper put your helper bot Username Without @ in bot.lua, line 22
 
 ```sh
-# Let's install the bot.
-cd $HOME
-git clone https://github.com/BeyondTeam/BDReborn.git
-cd BDReborn
-chmod +x beyond.sh
-./beyond.sh install
-./beyond.sh 
-# Enter a phone number & confirmation code.
+<< TH3BOSS >>
 
-# For Auto Launch:
-cd BDReborn
+🔸➖🔹➖🔸➖🔹
+<< V16 WE ARE TH3BEST >>
+🔸➖🔹➖🔸➖🔹
+ << كـيـفـيـه تـنـصـيـب سـورس الـزعـيـم >>
+🔸➖🔹➖🔸➖🔹
+ << افتـح ترمنـــأل وخلي >>
+🔸➖🔹➖🔸➖🔹
+# Let's Install The Bot >>
+🔸➖🔹➖🔸➖🔹
+cd $HOME
+🔸➖🔹➖🔸➖🔹
+git clone https://github.com/moody2020/TH3BOSS.git
+🔸➖🔹➖🔸➖🔹
+cd TH3BOSS
+🔸➖🔹➖🔸➖🔹
+chmod +x TH3BOSS.sh
+🔸➖🔹➖🔸➖🔹
+./TH3BOSS.sh install
+🔸➖🔹➖🔸➖🔹
+./TH3BOSS.sh 
+🔸➖🔹➖🔸➖🔹
+# Enter A Phone Number & Confirmation Code >>
+🔸➖🔹➖🔸➖🔹
+# For Auto Launch >>
+🔸➖🔹➖🔸➖🔹
+cd TH3BOSS
+🔸➖🔹➖🔸➖🔹
 chmod 777 autobd.sh
+🔸➖🔹➖🔸➖🔹
 screen ./autobd.sh
+🔸➖🔹➖🔸➖🔹
+<< TH3BOSS >>
+
+<< # Dev Bot @TH3BOSS >>
+
+<< # Channel Bot @llDEV1ll >>
 ```
 ### One command
 To install everything in one command, use:
 ```sh
-cd $HOME && git clone https://github.com/BeyondTeam/BDReborn.git && cd BDReborn && chmod +x beyond.sh && ./beyond.sh install && ./beyond.sh
+cd $HOME && git clone https://github.com/moody2020/TH3BOSS.git && cd TH3BOSS && chmod +x TH3BOSS.sh && ./TH3BOSS.sh install && ./TH3BOSS.sh
 
 OR
 
-cd $HOME && git clone https://github.com/BeyondTeam/BDReborn.git && cd BDReborn && chmod +x beyond.sh && ./beyond.sh install && chmod 777 autobd.sh && screen ./autobd.sh
+cd $HOME && git clone https://github.com/moody2020/TH3BOSS.git && cd TH3BOSS && chmod +x TH3BOSS.sh && ./TH3BOSS.sh install && chmod 777 autobd.sh && screen ./autobd.sh
 ```
 
 * * *
 
 # Support and Development
 
-More information [Beyond Global Chat](https://telegram.me/joinchat/AAAAAEIDQ8HTjezV4syUSA)
+More information [TH3BOSS Global Chat](https://t.me/joinchat/A5_fO0OPsgbb_99AkUgWQ)
 
-# Special thanks to
-[@MrHalix](https://github.com/MrHalix)
+More information [TH3BOSS Channel](https://t.me/llDEV1ll)
 
-[@Vysheng](https://github.com/vysheng)
 
 * * *
 
-# Developers!
+# Developers !
 
-[SoLiD](https://github.com/solid021) ([Telegram](https://telegram.me/SoLiD))
+[TH3BOSS](https://github.com/moody2020) ([Telegram](https://telegram.me/TH3BOSS))
 
-[To0fan](https://github.com/To0fan) ([Telegram](https://telegram.me/ToOfan))
+[Mohammed Hisham](https://github.com/moody2020) ([Telegram](https://telegram.me/lBOSSl))
 
-[MAKAN](https://github.com/makanj) ([Telegram](https://telegram.me/MAKAN))
+[TEAMBOSS](https://github.com/moody2020) ([Telegram](https://telegram.me/llDEV1ll))
 
 
-### Our Telegram channel:
+### Our Telegram channel : [@llDEV1ll](https://telegram.me/llDEV1ll)
 
-[@BeyondTeam](https://telegram.me/BeyondTeam)
+# Special thanks to [@blcon](https://telegram.me/blcon)
 
-### Our Web Site:
-
-[Beyond Development Forum](https://Beyond-Dev.iR)
+# [<< TH3BOSS >> V16 (Final Version)](https://telegram.me/llDEV1ll)
