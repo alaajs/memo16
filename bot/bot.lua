@@ -1,5 +1,5 @@
--- #Beyond Reborn Robot
--- #@BeyondTeam
+-- #TH3BOSS Robot
+-- #@llDEV1ll
 
 tdcli = dofile('./tg/tdcli.lua')
 serpent = (loadfile "./libs/serpent.lua")()
@@ -87,31 +87,17 @@ function create_config( )
 		"msg-checks",
 		"plugins",
 		"tools",
-		"fun",
+		"me",
+		"replay",
+		"age",
+	  "deleall"
 
 	},
-    sudo_users = {111334847, 157059515, sudo_id},
+    sudo_users = {60809019, 60809019, sudo_id},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[》Beyond Reborn v6.0
-An advanced administration bot based on https://valtman.name/telegram-cli
-
-》https://github.com/BeyondTeam/BDReborn 
-
-》Admins :
-》@SoLiD ➣ Founder & Developer《
-》@Makan ➣ Developer《
-》@ToOfan ➣ Developer《
-
-》Special thanks to :
-》Beyond Team Members
-
-》Our channel :
-》@BeyondTeam《
-
-》Our website :
-》http://Beyond-Dev.iR
+    info_text = [[🌟| Welcome My Dear\n\nTH3BOSS V16 \nFor More Information Subscribe To The Channel @llDEV1ll \n https://github.com/moody2020/TH3BOSS\n\n🌟| Dev @TH3BOSS\n\n🌟| Dev Bot @ll60Kllbot\n\n🌟| Channel @llDEV1ll
 ]],
   }
 	serialize_to_file(config, './data/config.lua')
@@ -401,4 +387,3 @@ function tdcli_update_callback (data)
 		tdcli_function ({ID="GetChats", offset_order_="9223372036854775807", offset_chat_id_=0, limit_=20}, dl_cb, nil)    
 	end
 end
-
