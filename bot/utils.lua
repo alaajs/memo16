@@ -1,4 +1,4 @@
-﻿--Begin Utils.lua By #BeyondTeam :)
+--Begin Utils.lua BY TH3BOSS :)
  local clock = os.clock
 function sleep(time)  -- seconds
   local t0 = clock()
@@ -95,8 +95,7 @@ end
 
 function set_config(msg)
 local function config_cb(arg, data)
-local hash = "gp_lang:"..msg.to.id
-local lang = redis:get(hash)
+
   --print(serpent.block(data))
    for k,v in pairs(data.members_) do
    local function config_mods(arg, data)
@@ -133,11 +132,7 @@ tdcli_function ({
   }, config_owner, {user_id=owner_id})
    end
 end
-  if not lang then
-    return tdcli.sendMessage(msg.to.id, msg.id, 0, "_All group admins has been promoted and group creator is now group owner_", 0, "md")
-else
-    return tdcli.sendMessage(msg.to.id, msg.id, 0, "_تمام ادمین های گروه به مقام مدیر منتصب شدند و سازنده گروه به مقام مالک گروه منتصب شد_", 0, "md")
-     end
+    return tdcli.sendMessage(msg.to.id, msg.id, 0, "🌟|_تمت ترقية جميع المشرفين على المجموعة وأصبح منشئ المجموعة الآن مالك المجموعة_", 0, "md")
  end
 tdcli.getChannelMembers(msg.to.id, 0, 'Administrators', 200, config_cb, {chat_id=msg.to.id})
 end
@@ -214,7 +209,6 @@ end
 --  Saves file to /tmp/. If file_name isn't provided,
 -- will get the text after the last "/" for filename
 -- do ski
-msg_caption = '\n@'..string.reverse("maeTdnoyeB")
 -- Waiting for ski:)
 -- and content-type for extension
 function download_to_file(url, file_name)
@@ -721,30 +715,23 @@ function file_dl(file_id)
 end
 
  function banned_list(chat_id)
-local hash = "gp_lang:"..chat_id
-local lang = redis:get(hash)
+
     local data = load_data(_config.moderation.data)
     local i = 1
   if not data[tostring(chat_id)] then
-  if not lang then
-    return '_Group is not added_'
-else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
-   end
+
+    return '*🌟| المجموعه ليست مضافه*'
+   
   end
   -- determine if table is empty
   if next(data[tostring(chat_id)]['banned']) == nil then --fix way
-     if not lang then
-					return "_No_ *banned* _users in this group_"
-   else
-					return "*هیچ کاربری از این گروه محروم نشده*"
-              end
+
+					return "*🌟| لايوجد أعضاء محظورين في هذه المجموعه*"
+              
 				end
-       if not lang then
-   message = '*List of banned users :*\n'
-         else
-   message = '_لیست کاربران محروم شده از گروه :_\n'
-     end
+
+   message = '_🌟| قائمه الاعضاء المحظورين :_\n'
+     
   for k,v in pairs(data[tostring(chat_id)]['banned']) do
     message = message ..i.. '- '..v..' [' ..k.. '] \n'
    i = i + 1
@@ -753,30 +740,22 @@ end
 end
 
  function silent_users_list(chat_id)
-local hash = "gp_lang:"..chat_id
-local lang = redis:get(hash)
+
     local data = load_data(_config.moderation.data)
     local i = 1
   if not data[tostring(chat_id)] then
-  if not lang then
-    return '_Group is not added_'
-else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
-   end
+
+    return '*🌟| المجموعه ليست مضافه*'
+   
   end
   -- determine if table is empty
   if next(data[tostring(chat_id)]['is_silent_users']) == nil then --fix way
-        if not lang then
-					return "_No_ *silent* _users in this group_"
-   else
-					return "*لیست کاربران سایلنت شده خالی است*"
+
+					return "*🌟| لايوجد اعضاء مكتومين في هذه المجموعه*"
              end
-				end
-      if not lang then
-   message = '*List of silent users :*\n'
-       else
-   message = '_لیست کاربران سایلنت شده :_\n'
-    end
+				
+   message = '_🌟| قائمه الاعضاء المكتومين :_\n'
+    
   for k,v in pairs(data[tostring(chat_id)]['is_silent_users']) do
     message = message ..i.. '- '..v..' [' ..k.. '] \n'
    i = i + 1
@@ -785,16 +764,12 @@ end
 end
 
 function whitelist(chat_id)
-local hash = "gp_lang:"..chat_id
-local lang = redis:get(hash)
+
     local data = load_data(_config.moderation.data)
     local i = 1
   if not data[tostring(chat_id)] then
-  if not lang then
-    return '_Group is not added_'
-else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
-   end
+    return '*🌟| المجموعه ليست مضافه*'
+   
   end
   if not data[tostring(chat_id)]['whitelist'] then
     data[tostring(chat_id)]['whitelist'] = {}
@@ -802,17 +777,13 @@ else
     end
   -- determine if table is empty
   if next(data[tostring(chat_id)]['whitelist']) == nil then --fix way
-     if not lang then
-					return "_No_ *users* _in white list_"
-   else
-					return "*هیچ کاربری در لیست سفید وجود ندارد*"
-              end
+
+     return "*🌟| لايوجد اعضاء ضمن القائمه البيضاء في هذه المجموعه*"
+             
 				end
-       if not lang then
-   message = '*Users of white list :*\n'
-         else
-   message = '_کاربران لیست سفید :_\n'
-     end
+
+   message = '_🌟| قائمه الاعضاء القائمه البيضاء :_\n'
+    
   for k,v in pairs(data[tostring(chat_id)]['whitelist']) do
     message = message ..i.. '- '..v..' [' ..k.. '] \n'
    i = i + 1
@@ -821,8 +792,7 @@ end
 end
 
  function gbanned_list(msg)
-local hash = "gp_lang:"..msg.chat_id_
-local lang = redis:get(hash)
+
     local data = load_data(_config.moderation.data)
     local i = 1
   if not data['gban_users'] then
@@ -830,17 +800,10 @@ local lang = redis:get(hash)
     save_data(_config.moderation.data, data)
   end
   if next(data['gban_users']) == nil then --fix way
-    if not lang then
-					return "_No_ *globally banned* _users available_"
-   else
-					return "*هیچ کاربری از گروه های ربات محروم نشده*"
-             end
+					return "*🌟| لايوجد اعضاء محظورين عام*"
 				end
-        if not lang then
-   message = '*List of globally banned users :*\n'
-   else
-   message = '_لیست کاربران محروم شده از گروه های ربات :_\n'
-   end
+   message = '_🌟| قائمه المحظورين عام :_\n'
+   
   for k,v in pairs(data['gban_users']) do
     message = message ..i.. '- '..v..' [' ..k.. '] \n'
    i = i + 1
@@ -849,37 +812,30 @@ end
 end
 
  function filter_list(msg)
-local hash = "gp_lang:"..msg.chat_id_
-local lang = redis:get(hash)
+
     local data = load_data(_config.moderation.data)
   if not data[tostring(msg.chat_id_)]['filterlist'] then
     data[tostring(msg.chat_id_)]['filterlist'] = {}
     save_data(_config.moderation.data, data)
     end
   if not data[tostring(msg.chat_id_)] then
-  if not lang then
-    return '_Group is not added_'
-else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
-   end
+
+    return '*🌟| المجموعه ليست مضافه*'
+   
   end
   -- determine if table is empty
   if next(data[tostring(msg.chat_id_)]['filterlist']) == nil then --fix way
-      if not lang then
-    return "*Filtered words list* _is empty_"
-      else
-    return "_لیست کلمات فیلتر شده خالی است_"
-     end
+
+    return "_🌟| قائمه الكلمات الممنوعه فارغه_"
+     
   end
   if not data[tostring(msg.chat_id_)]['filterlist'] then
     data[tostring(msg.chat_id_)]['filterlist'] = {}
     save_data(_config.moderation.data, data)
     end
-      if not lang then
-       filterlist = '*List of filtered words :*\n'
-         else
-       filterlist = '_لیست کلمات فیلتر شده :_\n'
-    end
+
+       filterlist = '_🌟| قائمه الكلمات الممنوعه :_\n'
+    
  local i = 1
    for k,v in pairs(data[tostring(msg.chat_id_)]['filterlist']) do
               filterlist = filterlist..'*'..i..'* - _'..check_markdown(k)..'_\n'
@@ -887,4 +843,3 @@ else
          end
      return filterlist
    end
-
