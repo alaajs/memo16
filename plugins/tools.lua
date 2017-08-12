@@ -174,11 +174,11 @@ else
 user_name = check_markdown(data.first_name_)
 end
 if is_admin1(tonumber(data.id_)) then
- return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_انه بالتأكيد اداري ✔️_', 0, "md")
+ return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_انه بالتأكيد اداري ☑️_', 0, "md")
    end
 	    table.insert(_config.admins, {tonumber(data.id_), user_name})
 		save_config()
- return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_تمت ترقيته ليصبح اداري ✔️_', 0, "md")
+ return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_تمت ترقيته ليصبح اداري ☑️_', 0, "md")
 end
 tdcli_function ({
     ID = "GetUser",
@@ -194,12 +194,12 @@ else
 user_name = check_markdown(data.first_name_)
 end
 if not is_admin1(data.id_) then
- return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد ليس اداري ✔️_', 0, "md")
+ return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد ليس اداري ☑️_', 0, "md")
    end
 		table.remove(_config.admins, nameid)
 		save_config()
 
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم تنزيله من الاداره ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم تنزيله من الاداره ☑️_', 0, "md")
 end
 tdcli_function ({
     ID = "GetUser",
@@ -214,12 +214,12 @@ else
 user_name = check_markdown(data.first_name_)
 end
 if already_sudo(tonumber(data.id_)) then
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد مطور ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد مطور ☑️_', 0, "md")
    end
           table.insert(_config.sudo_users, tonumber(data.id_))
 		save_config()
      reload_plugins(true)
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم ترقيته ليصبح مطور ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم ترقيته ليصبح مطور ☑️_', 0, "md")
 end
 tdcli_function ({
     ID = "GetUser",
@@ -234,12 +234,12 @@ else
 user_name = check_markdown(data.first_name_)
 end
      if not already_sudo(data.id_) then
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد ليس مطور ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد ليس مطور ☑️_', 0, "md")
    end
           table.remove(_config.sudo_users, getindex( _config.sudo_users, tonumber(data.id_)))
 		save_config()
      reload_plugins(true) 
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم تنزيله من المطورين ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم تنزيله من المطورين ☑️_', 0, "md")
 end
 tdcli_function ({
     ID = "GetUser",
@@ -262,38 +262,38 @@ user_name = check_markdown(data.title_)
 end
     if cmd == "رفع اداري" then
 if is_admin1(tonumber(data.id_)) then
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد اداري ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد اداري ☑️_', 0, "md")
    end
 	    table.insert(_config.admins, {tonumber(data.id_), user_name})
 		save_config()
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم ترقيته ليصبح اداري ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم ترقيته ليصبح اداري ☑️_', 0, "md")
 end
     if cmd == "تنزيل اداري" then
 	local nameid = index_function(tonumber(data.id_))
 if not is_admin1(data.id_) then
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد ليس اداري ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد ليس اداري ☑️_', 0, "md")
    end
 		table.remove(_config.admins, nameid)
 		save_config()
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم تنزيله من الاداره ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم تنزيله من الاداره ☑️_', 0, "md")
 end
     if cmd == "رفع مطور" then
 if already_sudo(tonumber(data.id_)) then
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد مطور ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد مطور ☑️_', 0, "md")
    end
           table.insert(_config.sudo_users, tonumber(data.id_))
 		save_config()
      reload_plugins(true)
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم ترقيته ليصبح مطور ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم ترقيته ليصبح مطور ☑️_', 0, "md")
 end
     if cmd == "تنزيل مطور" then
      if not already_sudo(data.id_) then
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد ليس مطور ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد ليس مطور ☑️_', 0, "md")
    end
           table.remove(_config.sudo_users, getindex( _config.sudo_users, tonumber(data.id_)))
 		save_config()
      reload_plugins(true) 
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم تنزيله من المطورين ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم تنزيله من المطورين ☑️_', 0, "md")
    end
 else
   return tdcli.sendMessage(arg.chat_id, "", 0, "_🌟| |  لا يوجد _", 0, "md")
@@ -311,38 +311,38 @@ user_name = check_markdown(data.first_name_)
 end
     if cmd == "رفع اداري" then
 if is_admin1(tonumber(data.id_)) then
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد اداري ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد اداري ☑️_', 0, "md")
    end
 	    table.insert(_config.admins, {tonumber(data.id_), user_name})
 		save_config()
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تمت ترقيته ليصبح اداري ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تمت ترقيته ليصبح اداري ☑️_', 0, "md")
 end 
     if cmd == "تنزيل اداري" then
 	local nameid = index_function(tonumber(data.id_))
 if not is_admin1(data.id_) then
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد ليس اداري ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد ليس اداري ☑️_', 0, "md")
    end
 		table.remove(_config.admins, nameid)
 		save_config()
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم تنزيله من الاداره ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم تنزيله من الاداره ☑️_', 0, "md")
 end
     if cmd == "رفع مطور" then
 if already_sudo(tonumber(data.id_)) then
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد مطور ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد مطور ☑️_', 0, "md")
    end
           table.insert(_config.sudo_users, tonumber(data.id_))
 		save_config()
      reload_plugins(true)
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم ترقيته ليصبح مطور ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم ترقيته ليصبح مطور ☑️_', 0, "md")
 end
     if cmd == "تنزيل مطور" then
      if not already_sudo(data.id_) then
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد ليس مطور ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ انه بالتأكيد ليس مطور ☑️_', 0, "md")
    end
           table.remove(_config.sudo_users, getindex( _config.sudo_users, tonumber(data.id_)))
 		save_config()
      reload_plugins(true) 
-        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم تنزيله من المطورين ✔️_', 0, "md")
+        return tdcli.sendMessage(arg.chat_id, "", 0, '🌟|  _العضو_ ['..user_name..'] \n🌟| | _الايدي_ *['..data.id_..']*\n🌟| |_ تم تنزيله من المطورين ☑️_', 0, "md")
    end
 else
   return tdcli.sendMessage(arg.chat_id, "", 0, "_🌟| | لا يوجد _", 0, "md")
@@ -362,7 +362,7 @@ local function pre_process(msg)
 				tdcli.sendMessage(msg.to.id, msg.id_, 1, '🌟| |_تم دعم المجموعه لمده يوم واحد يرجى التحدث مع مطوري لتجديد الوقت_', 1, 'md')
 		end
 		if chex and not exd and msg.from.id ~= SUDO and not is_sudo(msg) then
-			local text1 = '🌟|  دعم ال مجموعه لقد انتهى⌚️ \n\nID:  <code>'..msg.to.id..'</code>\n\nعندما ترید البوت ان یترک المجموعه نفذ هذا الامر التالي\n\nغادر '..msg.to.id..'\nلدخول هذا المجموعه تستطیع الاستفاده من الامر التالي🛡:\nاضافه '..msg.to.id..'\n_________________\nعندما ترید دعم المجموعه من جدید تستطیع الاستفاده من الاوامر التالیه⌚️...\n\n<b>لدعم لمدت شهر:</b>\nالمده 1 '..msg.to.id..'\n\n<b>الدعم لمدة 3 اشهر:</b>\nالمده 2 '..msg.to.id..'\n\n<b>لدعم بلا نهایه👨🏻⌚️✔️:</b>\nالمده 3 '..msg.to.id
+			local text1 = '🌟|  دعم ال مجموعه لقد انتهى⌚️ \n\nID:  <code>'..msg.to.id..'</code>\n\nعندما ترید البوت ان یترک المجموعه نفذ هذا الامر التالي\n\nغادر '..msg.to.id..'\nلدخول هذا المجموعه تستطیع الاستفاده من الامر التالي🛡:\nاضافه '..msg.to.id..'\n_________________\nعندما ترید دعم المجموعه من جدید تستطیع الاستفاده من الاوامر التالیه⌚️...\n\n<b>لدعم لمدت شهر:</b>\nالمده 1 '..msg.to.id..'\n\n<b>الدعم لمدة 3 اشهر:</b>\nالمده 2 '..msg.to.id..'\n\n<b>لدعم بلا نهایه👨🏻⌚️☑️:</b>\nالمده 3 '..msg.to.id
 			local text2 = '🌟|_دعم هذه المجموعه انتهى ولان لم یتم ال��ع�� المجدد المجموعه تم حذفها من قائمه البوت وسیخرج البوت من المجموعه._'
 				tdcli.sendMessage(SUDO, 0, 1, text1, 1, 'html')
 				tdcli.sendMessage(msg.to.id, 0, 1, text2, 1, 'md')
@@ -452,7 +452,7 @@ if matches[1]:lower() == 'شحن'  and matches[2] and matches[3] then
 					redis:set('CheckExpire::'..msg.to.id,true)
 				end
 					tdcli.sendMessage(SUDO, 0, 1, '🌟|  وقت تفعيل المجموعة '..matches[2]..'🌟|  الوقت المقدر  '..matches[3]..' 🌟|  وقت التفعيل', 1, 'md')
-					tdcli.sendMessage(matches[2], 0, 1, 'تم تنفيذ امر المطور البوت بالمدة ⌚️✔️ `'..matches[3]..'` تم دعم یوم🛡 \n لمشاهده وقت دعم البوت ارسل فحص  🗣⚒...',1 , 'md')
+					tdcli.sendMessage(matches[2], 0, 1, 'تم تنفيذ امر المطور البوت بالمدة ⌚️☑️ `'..matches[3]..'` تم دعم یوم🛡 \n لمشاهده وقت دعم البوت ارسل فحص  🗣⚒...',1 , 'md')
 			else
 					tdcli.sendMessage(msg.to.id, msg.id_, 1, 'من 1 الى 1000 فقط', 1, 'md')
 			end
@@ -607,7 +607,7 @@ if matches[1] == 'شحن' and matches[2] and not matches[3] and is_sudo(msg) the
 					redis:set('CheckExpire::'..msg.to.id)
 				end
 					tdcli.sendMessage(msg.to.id, msg.id_, 1, '⌚️\nتم شحن وقت التفعيل ل '..matches[2]..' تم شحن البوت⌚️...', 1, 'md')
-                                        tdcli.sendMessage(SUDO, 0, 1, ' 🌟|  شحن البوت في مجموعه⌚️ '..matches[2]..' ل مدة '..msg.to.id..' تم تمدیده✔️', 1, 'md')
+                                        tdcli.sendMessage(SUDO, 0, 1, ' 🌟|  شحن البوت في مجموعه⌚️ '..matches[2]..' ل مدة '..msg.to.id..' تم تمدیده☑️', 1, 'md')
 			else
 					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_ اختر من 1 الى 1000 فقط ⌚️    ._', 1, 'md')
 
@@ -680,17 +680,17 @@ tdcli_function ({
 if matches[1] == 'صنع مجموعه' and is_admin(msg) then
 local text = matches[2]
 tdcli.createNewGroupChat({[0] = msg.from.id}, text, dl_cb, nil)
-return '_🌟| | تـم أنـشـاء الـمـجـوعـه ✔️_'
+return '_🌟| | تـم أنـشـاء الـمـجـوعـه ☑️_'
 end
 if matches[1] == 'ترقيه سوبر' and is_admin(msg) then
 local text = matches[2]
 tdcli.createNewChannelChat(text, 1, '', dl_cb, nil)
-return '_🌟| | تـم تـرقـيـه الـمـجـوعـه ✔️_'
+return '_🌟| | تـم تـرقـيـه الـمـجـوعـه ☑️_'
 end
 if matches[1] == 'سوبر كروب' and is_admin(msg) then
 local id = msg.to.id
 tdcli.migrateGroupChatToChannelChat(id, dl_cb, nil)
-return '_🌟| | تـم تـرقـيـه الـمـجـوعـه ✔️_'
+return '_🌟| | تـم تـرقـيـه الـمـجـوعـه ☑️_'
 end
 if matches[1] == 'دخول' and is_admin(msg) then
 tdcli.importChatInviteLink(matches[2])
