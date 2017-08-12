@@ -7,7 +7,7 @@ user = msg.from.id
 		lock_bots = test[arg.chat_id]['settings']['lock_bots']
 
     if data.type_.ID == "UserTypeBot" then
-      if not is_owner(arg.msg) and lock_bots == '✔️' then
+      if not is_owner(arg.msg) and lock_bots == '☑️' then
 kick_user(data.id_, arg.chat_id)
 end
 end
@@ -46,7 +46,7 @@ local function action_by_reply(arg, data)
   local cmd = arg.cmd
 if not tonumber(data.sender_user_id_) then return false end
 if data.sender_user_id_ then
-  if cmd == "ban" then
+  if cmd == "حظر" then
 local function ban_cb(arg, data)
     local administration = load_data(_config.moderation.data)
 if data.username_ then
@@ -73,7 +73,7 @@ tdcli_function ({
     user_id_ = data.sender_user_id_
   }, ban_cb, {chat_id=data.chat_id_,user_id=data.sender_user_id_})
   end
-   if cmd == "unban" then
+   if cmd == "الغاء الحظر" then
 local function unban_cb(arg, data)
 
     local administration = load_data(_config.moderation.data)
@@ -230,7 +230,7 @@ user_name = '@'..check_markdown(data.type_.user_.username_)
 else
 user_name = check_markdown(data.title_)
 end
-  if cmd == "ban" then
+  if cmd == "حظر" then
      if data.id_ == our_id then
   return tdcli.sendMessage(arg.chat_id, "", 0, "*🌟| لا تستطيع حظر المدراء او الادمنيه*", 0, "md")
      end
@@ -245,7 +245,7 @@ administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] = user_name
    kick_user(data.id_, arg.chat_id)
     return tdcli.sendMessage(arg.chat_id, "", 0, '🌟| _العضو_ ['..user_name..'] \n🌟| _الايدي_ *['..data.id_..']*\n🌟| _ تم حظره ☑️_', 0, "md")
 end  
-  if cmd == "unban" then
+  if cmd == "الغاء الحظر" then
 if not administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] then
     return tdcli.sendMessage(arg.chat_id, "", 0, '🌟| _العضو_ ['..user_name..'] \n🌟| _الايدي_ *['..data.id_..']*\n🌟| _ تم بالتأكيد الغاء حظره ☑️_', 0, "md")
    end
@@ -450,7 +450,7 @@ if not matches[2] and msg.reply_id then
       ID = "GetMessage",
       chat_id_ = msg.to.id,
       message_id_ = msg.reply_id
-    }, action_by_reply, {chat_id=msg.to.id,cmd="ban"})
+    }, action_by_reply, {chat_id=msg.to.id,cmd="حظر"})
 end
   if matches[2] and string.match(matches[2], '^%d+$') then
     if userid == our_id then
@@ -477,16 +477,16 @@ kick_user(matches[2], msg.to.id)
      tdcli_function ({
       ID = "SearchPublicChat",
       username_ = matches[2]
-    }, action_by_username, {chat_id=msg.to.id,username=matches[2],cmd="ban"})
+    }, action_by_username, {chat_id=msg.to.id,username=matches[2],cmd="حظر"})
       end
    end
- if matches[1] == "الغاء العام" and is_mod(msg)  then
+ if matches[1] == "الغاء الحظر" and is_mod(msg)  then
 if not matches[2] and msg.reply_id then
     tdcli_function ({
       ID = "GetMessage",
       chat_id_ = msg.to.id,
       message_id_ = msg.reply_id
-    }, action_by_reply, {chat_id=msg.to.id,cmd="unban"})
+    }, action_by_reply, {chat_id=msg.to.id,cmd="الغاء الحظر"})
 end
   if matches[2] and string.match(matches[2], '^%d+$') then
    if not is_banned(matches[2], msg.to.id) then
@@ -502,7 +502,7 @@ return tdcli.sendMessage(arg.chat_id, "", 0, '🌟| _العضو_ ['..user_name..
     tdcli_function ({
       ID = "SearchPublicChat",
       username_ = matches[2]
-    }, action_by_username, {chat_id=msg.to.id,username=matches[2],cmd="unban"})
+    }, action_by_username, {chat_id=msg.to.id,username=matches[2],cmd="الغاء الحظر"})
       end
    end
  if matches[1] == "كتم" and is_mod(msg)  then
