@@ -81,6 +81,6 @@ More information [TH3BOSS Channel](https://t.me/llDEV1ll)
 
 ### Our Telegram channel : [@llDEV1ll](https://telegram.me/llDEV1ll)
 
-# Special thanks to [@blcon](https://telegram.me/blcon)
+# Special thanks to Omar Alsaray : [@blcon](https://telegram.me/blcon)
 
 # [<< TH3BOSS >> V16 (Final Version)](https://telegram.me/llDEV1ll)
