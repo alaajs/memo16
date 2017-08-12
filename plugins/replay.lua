@@ -71,7 +71,7 @@ end
 
 
 ------------------------------------------------
-if lock_reply =="❌"  then
+if lock_reply =="☑️"  then
 
 if ( msg.text ) and ( msg.to.type == "channel" ) or ( msg.to.type == "chat" ) then
 local su = {
