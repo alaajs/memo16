@@ -97,20 +97,20 @@ function create_config( )
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [🌟| TH3BOSS V16 For More Information Subscribe
+    info_text = [[ 🌟| TH3BOSS V16 For More Information Subscribe
 
 🌟| https://github.com/moody2020/TH3BOSS 
 
 🌟| ƊЄƔЄԼƠƤMЄƝƬ ƬӇȜƁƠƧƧ :
-🌟| @TH3BOSS ➣ Developer 《
-🌟| @llDEV1ll ➣ Developer Channel 《
-🌟| @TH3BOSSBOT ➣ Developer Bot 《
+🌟| @TH3BOSS ➣ Developer 🌟
+🌟| @llDEV1ll ➣ Developer Channel 🌟
+🌟| @TH3BOSSBOT ➣ Developer Bot 🌟
 
 🌟| Special thanks to :
 🌟| TH3BOSS Team Members
 
 🌟| Our channel :
-🌟| @llDEV1ll 《
+🌟| @llDEV1ll 🌟
 
 🌟| Our Gruob Manager :
 🌟| https://telegram.me/joinchat/A5_fO0MzalV7uXl93tOLzA
