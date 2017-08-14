@@ -97,7 +97,23 @@ function create_config( )
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[🌟| Welcome My Dear\n\nTH3BOSS V16 \nFor More Information Subscribe To The Channel @llDEV1ll \n https://github.com/moody2020/TH3BOSS\n\n🌟| Dev @TH3BOSS\n\n🌟| Dev Bot @ll60Kllbot\n\n🌟| Channel @llDEV1ll
+    info_text = [🌟| TH3BOSS V16 For More Information Subscribe
+
+🌟| https://github.com/moody2020/TH3BOSS 
+
+🌟| ƊЄƔЄԼƠƤMЄƝƬ ƬӇȜƁƠƧƧ :
+🌟| @TH3BOSS ➣ Developer 《
+🌟| @llDEV1ll ➣ Developer Channel 《
+🌟| @TH3BOSSBOT ➣ Developer Bot 《
+
+🌟| Special thanks to :
+🌟| TH3BOSS Team Members
+
+🌟| Our channel :
+🌟| @llDEV1ll 《
+
+🌟| Our Gruob Manager :
+🌟| https://telegram.me/joinchat/A5_fO0MzalV7uXl93tOLzA
 ]],
   }
 	serialize_to_file(config, './data/config.lua')
