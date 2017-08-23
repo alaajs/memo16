@@ -8,14 +8,19 @@
 # Let's Install The Bot >>
 🔸➖🔹➖🔸➖🔹
 cd $HOME
+
 🔸➖🔹➖🔸➖🔹
 git clone https://github.com/alaajs/memo16.git
+
 🔸➖🔹➖🔸➖🔹
 cd memo16
+
 🔸➖🔹➖🔸➖🔹
 chmod +x TH3BOSS.sh
+
 🔸➖🔹➖🔸➖🔹
 ./TH3BOSS.sh install
+
 🔸➖🔹➖🔸➖🔹
 ./TH3BOSS.sh 
 🔸➖🔹➖🔸➖🔹
