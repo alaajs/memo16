@@ -50,12 +50,11 @@ screen ./autobd.sh
 
 << # Channel Bot @memojs >>
 ```
-### One command
-To install everything in one command, use:
-```sh
+لتنصيب السورس بكورد واحد
+
 cd $HOME && git clone https://github.com/alaajs/memo16.git && cd memo16 && chmod +x TH3BOSS.sh && ./TH3BOSS.sh install && ./TH3BOSS.sh
 
-OR
+او
 
 cd $HOME && git clone https://github.com/alaajs/memo16.git && cd memo16 && chmod +x TH3BOSS.sh && ./TH3BOSS.sh install && chmod 777 autobd.sh && screen ./autobd.sh
 ```
