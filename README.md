@@ -5,13 +5,10 @@
 🔸➖🔹➖🔸➖🔹
  << افتـح ترمنـــأل وخلي >>
 🔸➖🔹➖🔸➖🔹
-# Let's Install The Bot >>
-🔸➖🔹➖🔸➖🔹
 cd $HOME
-
 🔸➖🔹➖🔸➖🔹
-git clone https://github.com/alaajs/memo16.git
 
+git clone https://github.com/alaajs/memo16.git
 🔸➖🔹➖🔸➖🔹
 cd memo16
 
